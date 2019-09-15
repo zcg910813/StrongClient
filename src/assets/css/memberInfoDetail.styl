@@ -1,0 +1,276 @@
+.member-info-detail
+  margin-top 20px
+  .nav-list
+    display flex
+    .el-dropdown>div
+      width 100%
+      height 100%
+      display flex
+      align-content center
+      align-items center
+      justify-content center
+    &>div
+      padding-right 40px
+      text-align center
+      span:nth-child(1)
+        cursor pointer
+        display flex
+        flex-direction column
+        width 65px
+        height 65px
+        box-shadow 0px 2px 14px 0px rgba(64, 81, 137, 0.53)
+        border-radius 10px
+        align-items center
+        justify-content center
+        img
+          width 34px
+          height 34px
+        &:hover
+          background linear-gradient(139deg,rgba(11,32,58,1) 0%,rgba(35,55,92,1) 100%)
+      span:last-child
+        text-align center
+        line-height 34px
+      div.act
+        display flex
+        flex-direction column
+        width 65px
+        height 65px
+        box-shadow 0px 2px 14px 0px rgba(64, 81, 137, 0.53)
+        border-radius 10px
+        align-items center
+        justify-content center
+.member-info
+  margin-top 20px
+  .member-card
+    overflow hidden
+  .el-card__body
+    div
+      width 260px
+      height 160px
+      background linear-gradient(137deg,rgba(1,23,47,1) 0%,rgba(47,65,112,1) 100%)
+      position relative
+      border-radius 10px
+      span
+        position absolute
+        top 20px
+        left 20px
+        width 65px
+        height 65px
+        background-color #fff
+        border-radius 50%
+        img
+          width 100%
+          height 100%
+          display inline-block
+    ul li
+      font-size 14px
+      line-height 28px
+      color #60646D
+.detail-list
+  margin-top 20px
+  .el-table
+    margin-top 30px
+  .member-analysis
+    .el-col-18
+      border-right 1px solid #dcdee2
+      .number
+        display flex
+        margin-top 30px
+        &>div
+          border 1px solid #dcdee2
+          display inline-block
+          padding 20px
+          width 100%
+          h3
+            font-size 15px
+          h1
+            font-size 23px
+            line-height 36px
+            text-indent 130px
+            span
+              font-size 13px
+          &:first-child
+            flex 0 0 35%
+            border-right 0 none
+            h1
+              color #67B9F5
+          &:last-child
+            border-right 0 none
+            h1
+              color #7C88C8
+      .singin-calendar
+        margin-top 30px
+    .el-col-6
+      margin-top 30px
+      div
+        span
+          font-size 14px
+          text-indent 30px
+          display inline-block
+          font-weight 600
+        h1
+          font-size 20px
+          line-height 54px
+          color red
+          text-align center
+#calendar
+  width 100%
+  margin 0 auto
+  .month
+    height 30px
+    width 100%
+  .month ul
+    margin 0
+    padding 0
+    display flex
+    justify-content space-between
+    position relative
+  .month ul li
+    &:first-child
+      font-weight 600
+    &:last-child
+      padding-right 30px
+  .year-month
+    display block
+    width 110px
+    font-size 14px
+    flex-direction column
+    align-items center
+    justify-content space-around
+    text-align center
+  .choose-month
+    text-align center
+  .arrow
+    height 25px
+    line-height 25px
+    display inline-block
+    margin 0 20px
+    width 25px
+    background #ddd
+    border-radius 12.5px
+    text-align center
+    cursor pointer
+    -webkit-user-select none
+    -moz-user-select none
+    -ms-user-select none
+    user-select none
+  .month ul .year-month
+    color white
+    font-size 14px
+    text-transform uppercase
+    letter-spacing 3px
+    display block
+    text-align center
+    width 100%
+  .session
+    position absolute  !important
+    right 0  !important
+    color #000  !important
+    display inline !important
+    line-height 30px
+  .month ul li span
+    color #00B8EC
+  .weekdays
+    margin 0
+    padding 10px 0
+    border 1px solid #dcdee2
+    display flex
+    flex-wrap wrap
+    color #FFFFFF
+    justify-content space-around
+  .weekdays li
+    display inline-block
+    width 13.6%
+    text-align center
+    color #000
+    font-weight bolder
+  .days
+    padding 0
+    background #FFFFFF
+    margin 0
+    display flex
+    flex-wrap wrap
+    justify-content space-around
+    border-left 1px solid #dcdee2
+  .days li
+    list-style-type none
+    display inline-block
+    width 14.1%
+    text-align center
+    height 40px
+    line-height 40px
+    font-size 14px
+    color #000
+    border-right 1px solid #dcdee2
+    border-bottom 1px solid #dcdee2
+  .days li .activep
+    border-radius 50%
+    background #00B8EC
+    color #fff
+    height 25px
+    line-height 25px
+    width 25px
+    display inline-block
+  .days li .activem
+    border-radius 50%
+    background #00e800
+    color #fff
+    height 25px
+    line-height 25px
+    width 25px
+    display inline-block
+  .days li .other-month
+    color #666
+    background #ddd
+    width 100%
+    height 100%
+    display block
+.recover-dialog
+  .el-form-item
+    width 100%
+    display inline-block
+.remark-label
+  word-spacing 25px
+.payee
+  letter-spacing 4px
+.buying
+  margin-top 20px
+._ctl_bRaduis
+  position absolute
+  width 150px
+  height 160px
+  background linear-gradient(180deg,rgba(143,163,214,0.1) 0%,rgba(107,131,209,0.18) 100%)
+  border-radius 50%
+  right -25px
+  top -30px
+  z-index 3
+._ctl_sRaduis
+  position absolute
+  width 120px
+  height 150px
+  background linear-gradient(152deg,rgba(58,81,124,1) 0%,rgba(56,77,122,1) 100%)
+  border-radius 50%
+  right -61px
+  bottom -70px
+  z-index 2
+.member-buy-cards
+  .el-form-item
+    display block
+    .el-input, .el-select, .el-textarea
+      width 260px !important
+.member-lists
+  flex 0 0 60%
+  li
+    span:nth-child(1)
+      width 220px
+      display inline-block
+.buycard-tip
+  line-height 30px
+  font-size 13px
+  color #888
+.buycard-tip
+  span
+    padding-left 15px
+.payee-title
+  .el-form-item__label
+    word-spacing 3px
