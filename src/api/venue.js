@@ -18,19 +18,19 @@ export const addVenue = (info) => { // 新增场馆
   })
 }
 
-export const fetchVenue = (info) => { // 获取场馆
+export const fetchVenue = (info) => { // 获取单个场馆
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/queryStore',
+    url: `v1/storage/manage/uid`,
     data,
     method: 'get'
   })
 }
 
-export const fetchAllVenue = (info) => { // 获取场馆
+export const fetchAllVenue = (info) => { // 获取场馆列表
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/queryAllStores',
+    url: 'v1/storage/manage',
     data,
     method: 'get'
   })
@@ -90,3 +90,4 @@ export const updateHardWare = (info) => { // 添加硬件
     method: 'post'
   })
 }
+// 这个文件貌似之前改过

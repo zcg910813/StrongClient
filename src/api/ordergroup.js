@@ -14,9 +14,11 @@ export const deleteordergroup = (info) => {
   return axios.request({
     url: 'v1/ordergroup/delete',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const queryordergroup = (curpage) => {
   let curPage = 1
@@ -26,7 +28,8 @@ export const queryordergroup = (curpage) => {
   return axios.request({
     url: 'v1/ordergroup/query',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 

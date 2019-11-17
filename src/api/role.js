@@ -8,6 +8,7 @@ export const getAllRole = (info) => {
     method: 'post'
   })
 }
+// 未找到文档
 
 export const deleteRole = (info) => {
   const data = info
@@ -17,6 +18,7 @@ export const deleteRole = (info) => {
     method: 'post'
   })
 }
+// 未找到文档
 
 export const addRole = (info) => {
   const data = info
@@ -35,6 +37,7 @@ export const editRole = (info) => {
     method: 'post'
   })
 }
+// 未找到文档
 
 export const getRoleResource = (info) => {
   const data = info
@@ -44,3 +47,4 @@ export const getRoleResource = (info) => {
     method: 'post'
   })
 }
+// 未找到文档

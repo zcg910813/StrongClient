@@ -14,16 +14,19 @@ export const updateRfid = (info) => {
   return axios.request({
     url: 'v1/members/updaterfid',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+// put用法
 
 export const queryMemberInfo = (memberuid) => {
   const data = {}
   return axios.request({
     url: `v1/members/querymemberinfo/${memberuid}`,
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -52,7 +55,8 @@ export const queryDeposit = (memberuid) => {
   return axios.request({
     url: 'v1/members/querydeposit',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -63,7 +67,8 @@ export const queryEarnest = (memberuid) => {
   return axios.request({
     url: 'v1/members/queryearnest',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -72,7 +77,8 @@ export const deleteEarnest = (memberuid) => {
   return axios.request({
     url: 'v1/members/deleteearnest',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
 
@@ -81,7 +87,8 @@ export const deleteDeposit = (memberuid) => {
   return axios.request({
     url: 'v1/members/deleteDeposit',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
 
@@ -90,7 +97,8 @@ export const notifyMsg = (msgdata) => {
   return axios.request({
     url: 'v1/members/updatenotifymsg',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
 
@@ -102,6 +110,7 @@ export const getAllDeposits = (info) => {   // 获取押金列表
     method: 'post'
   })
 }
+// 未找到文档
 
 export const getAllEarnests = (info) => { // 获取定金列表
   const data = info
@@ -111,6 +120,7 @@ export const getAllEarnests = (info) => { // 获取定金列表
     method: 'post'
   })
 }
+// 未找到文档
 
 export const insertCabinets = (info) => {
   const data = info
@@ -126,7 +136,8 @@ export const queryEffective = (info) => {
   return axios.request({
     url: 'v1/buyvipcard/queryEffective',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -135,7 +146,8 @@ export const queryPotential = (info) => {
   return axios.request({
     url: 'v1/buyvipcard/queryPotential',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -165,13 +177,15 @@ export const signInfo = (info) => {
     method: 'post'
   })
 }
+// 未找到接口文件
 
 export const orderRecord = (info) => { // 约课记录
   const data = info
   return axios.request({
     url: 'v1/memberanalysis/orderRecord',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -180,7 +194,8 @@ export const signPrivateLessonRecord = (info) => {
   return axios.request({
     url: 'v1/memberanalysis/signPrivateLessonRecord',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'  
   })
 }
 
@@ -189,7 +204,8 @@ export const queryMemberVipCard = (info) => {
   return axios.request({
     url: 'v1/memberanalysis/queryMemberVipCard',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -198,7 +214,8 @@ export const trainingRecordList = (info) => {
   return axios.request({
     url: 'v1/memberanalysis/trainingRecordList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -207,7 +224,8 @@ export const contractList = (info) => {
   return axios.request({
     url: 'v1/memberanalysis/contractList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -216,7 +234,8 @@ export const followList = (info) => {
   return axios.request({
     url: 'v1/memberanalysis/followList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -225,9 +244,11 @@ export const deleteFollow = (info) => {
   return axios.request({
     url: 'v1/follow/delete',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const deleteMembers = (info) => { // 删除会员
   const data = info
@@ -237,15 +258,18 @@ export const deleteMembers = (info) => { // 删除会员
     method: 'post'
   })
 }
+// 未找到文档
 
 export const updateMembers = (info) => { // 编辑会员
   const data = info
   return axios.request({
     url: 'v1/members/updateMember',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+// put用法
 
 export const depletedMembers = (info) => { // 耗尽会员
   const data = info
@@ -297,7 +321,8 @@ export const ContractOrder = (info) => { // 合同订单
   return axios.request({
     url: 'v1/members/queryOrderList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -306,7 +331,8 @@ export const getMemberBelongCard = (info) => { // 该会员的所有会员卡列
   return axios.request({
     url: 'v1/members/queryMemberVipCard',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -318,13 +344,15 @@ export const TrainingRecord = (info) => { // 训练记录
     method: 'post'
   })
 }
+// 未找到文档
 
 export const FollowUp = (info) => { // 跟进记录
   const data = info
   return axios.request({
     url: 'v1/members/queryFollowList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -333,7 +361,8 @@ export const queryMemberSignInfo = (info) => { // 会员分析
   return axios.request({
     url: 'v1/memberanalysis/queryMemberSignInfo',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 export const BuyWater = (info) => { // 购买水费

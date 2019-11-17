@@ -1,8 +1,9 @@
 import Axios from 'axios'
 import Cookies from 'vue-cookies'
-// const root = 'http://47.105.67.223:8888'
-const root = 'http://127.0.0.1:8888/'
+const root = 'http://47.105.67.223:8888'  
+// const root = 'http://127.0.0.1:8888/'
 // const root = 'http://192.168.0.114:8888'
+// Vue.prototype.$axios = axios
 class httpRequest {
   constructor () {
     this.options = {

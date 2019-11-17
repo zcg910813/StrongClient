@@ -12,14 +12,16 @@ export const memberBuyVipCard = (info) => {
 export const quertEffective = () => {
   return axios.request({
     url: 'v1/buyvipcard/queryEffective',
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
 export const queryPotential = () => {
   return axios.request({
     url: 'v1/buyvipcard/queryPotential',
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -91,6 +93,7 @@ export const Revoke = (info) => {
     method: 'post'
   })
 }
+//未找到对应文档
 
 export const ShengCard = (info) => {
   const data = info
@@ -100,6 +103,7 @@ export const ShengCard = (info) => {
     method: 'post'
   })
 }
+//未找到对应文档
 
 export const RenewalCard = (info) => {
   const data = info
@@ -145,6 +149,7 @@ export const PinCard = (info) => {
     method: 'post'
   })
 }
+//未找到对应文档
 
 export const PatchCard = (info) => {
   const data = info
@@ -154,6 +159,7 @@ export const PatchCard = (info) => {
     method: 'post'
   })
 }
+//未找到对应文档
 
 export const giveCard = (info) => {
   const data = info
@@ -178,7 +184,8 @@ export const QueryAllBVCard = (info) => {
   return axios.request({
     url: 'v1/buyvipcard/QueryAllBVCard',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -187,7 +194,8 @@ export const QueryAllBPCard = (info) => {
   return axios.request({
     url: 'v1/buyvipcard/QueryAllBPCard',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -214,9 +222,11 @@ export const stopCard = (info) => {
   return axios.request({
     url: 'v1/buyvipcard/StopCard',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+//不确定put请求的用法
 
 export const transferCard = (info) => {
   const data = info

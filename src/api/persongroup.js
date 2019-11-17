@@ -14,9 +14,11 @@ export const updateEmployeeGroup = (info) => {
   return axios.request({
     url: 'v1/employeegroup/update',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+// put用法
 
 export const deleteEmployeeGroup = (employeeId) => {
   const data = {
@@ -25,16 +27,19 @@ export const deleteEmployeeGroup = (employeeId) => {
   return axios.request({
     url: 'v1/employeegroup/delete',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const queryEmployeeGroup = () => {
   const data = {}
   return axios.request({
     url: 'v1/employeegroup/query',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -43,7 +48,8 @@ export const getAllPrivates = (info) => {  // 获取私教课列表
   return axios.request({
     url: 'v1/vipcard/getAllPrivates',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -52,7 +58,8 @@ export const queryPrivateDetails = (uid) => {
   return axios.request({
     url: 'v1/vipcard/queryPrivateDetails',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -61,9 +68,11 @@ export const deletePrivate = (uid) => {
   return axios.request({
     url: 'v1/vipcard/deletePrivate',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const addPrivate = (uid) => {
   const data = uid
@@ -79,6 +88,7 @@ export const editPrivate = (uid) => {
   return axios.request({
     url: 'v1/vipcard/updatePrivate',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }

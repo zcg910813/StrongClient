@@ -23,9 +23,11 @@ export const updateLeague = (info) => {
   return axios.request({
     url: 'v1/grouplesson/update',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+// put用法
 
 export const deleteLeague = (courseId) => {
   const data = {
@@ -34,9 +36,11 @@ export const deleteLeague = (courseId) => {
   return axios.request({
     url: 'v1/grouplesson/delete',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const copyLeague = (info) => {
   const data = info
@@ -63,7 +67,8 @@ export const queryLeague = (info) => { // 获取单独排课
   return axios.request({
     url: 'v1/grouplesson/query',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -108,7 +113,8 @@ export const grouplessonquery = (info) => {  // 团课预约查询(教练签到)
   return axios.request({
     url: 'v1/ordergroup/query',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -144,6 +150,7 @@ export const priOrderTimeSetQuery = (uid) => { // // 私教课预约限制get
   return axios.request({
     url: 'v1/coach/orderTimeSetQuery',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }

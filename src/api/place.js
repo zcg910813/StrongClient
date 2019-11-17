@@ -8,6 +8,7 @@ export const getPlaceList = (info) => {  // 获取场地列表
     method: 'get'
   })
 }
+// 未找到文档
 
 export const getPlaceData = (info) => { // 获取单个场地信息
   const data = info
@@ -17,6 +18,7 @@ export const getPlaceData = (info) => { // 获取单个场地信息
     method: 'get'
   })
 }
+// 未找到文档
 
 export const addPlace = (info) => { // 添加场地
   const data = info
@@ -44,6 +46,7 @@ export const deletePlace = (info) => { // 删除场地
     method: 'delete'
   })
 }
+// 有两个一样的接口不知道用哪个
 
 export const UploadExcel = (info) => { // 导入Excel
   const data = info
@@ -53,3 +56,4 @@ export const UploadExcel = (info) => { // 导入Excel
     method: 'update'
   })
 }
+// 未找到文档  并且不知道update用法

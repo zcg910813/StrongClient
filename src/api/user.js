@@ -17,6 +17,7 @@ export const getUserInfo = (token) => {
     method: 'get'
   })
 }
+// 找不到文档
 
 export const logout = (token) => {
   return axios.request({
@@ -24,3 +25,4 @@ export const logout = (token) => {
     method: 'post'
   })
 }
+// 找不到文档

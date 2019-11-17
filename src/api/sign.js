@@ -32,9 +32,11 @@ export const cancelSigninTable = (info) => { // 取消用户
   return axios.request({
     url: 'v1/signin/cancelMemSignin',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+// delete用法
 
 export const addLeadCard = (info) => { // 领手牌
   const data = info
@@ -69,9 +71,11 @@ export const getPrivateTable = (info) => { // 获取私教消课列表
   return axios.request({
     url: 'v1/coach/querySignPrivateLesson',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
+// 有两个接口相同的接口,但都是get请求
 
 export const checkBackPrivateTable = (info) => { // 签退
   const data = info
@@ -81,13 +85,15 @@ export const checkBackPrivateTable = (info) => { // 签退
     method: 'post'
   })
 }
+// 未找到文档
 
 export const cancelPrivateTable = (info) => { // 取消签到
   const data = info
   return axios.request({
     url: 'v1/coach/CancelSignPrivateLesson',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
 
@@ -99,3 +105,4 @@ export const searchDate = (info) => { // 模糊查询
     method: 'post'
   })
 }
+// 未找到文档

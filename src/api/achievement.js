@@ -5,7 +5,8 @@ export const getAchievementPerson = (info) => {
   return axios.request({
     url: 'v1/order/queryEmployeeAchi',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
 
@@ -14,6 +15,7 @@ export const getAchievementCoach = (info) => {
   return axios.request({
     url: 'v1/order/queryCoachAchi',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }

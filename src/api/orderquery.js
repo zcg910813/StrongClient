@@ -5,6 +5,7 @@ export const getOrderList = (info) => {
   return axios.request({
     url: 'v1/order/queryOrderList',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }

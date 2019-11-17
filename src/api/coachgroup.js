@@ -14,9 +14,11 @@ export const updateCoachGroup = (info) => {
   return axios.request({
     url: 'v1/coachgroup/update',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'put'
   })
 }
+//put用法
 
 export const deleteCoachGroup = (coachId) => {
   const data = {
@@ -25,15 +27,18 @@ export const deleteCoachGroup = (coachId) => {
   return axios.request({
     url: 'v1/coachgroup/delete',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'delete'
   })
 }
+//delete用法
 
 export const queryCoachGroup = () => {
   const data = {}
   return axios.request({
     url: 'v1/coachgroup/query',
     data,
-    method: 'post'
+    // method: 'post'
+    method: 'get'
   })
 }
