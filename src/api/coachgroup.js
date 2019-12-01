@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addCoachGroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/coachgroup/add',
+    url: 'v1/staff/coach/group',
     data,
     method: 'post'
   })
@@ -12,9 +12,8 @@ export const addCoachGroup = (info) => {
 export const updateCoachGroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/coachgroup/update',
+    url: `v1/staff/coach/group/${data.id}`  ,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
@@ -25,9 +24,8 @@ export const deleteCoachGroup = (coachId) => {
     id: coachId
   }
   return axios.request({
-    url: 'v1/coachgroup/delete',
+    url: 'v1/staff/coach/group',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -36,9 +34,8 @@ export const deleteCoachGroup = (coachId) => {
 export const queryCoachGroup = () => {
   const data = {}
   return axios.request({
-    url: 'v1/coachgroup/query',
+    url: 'v1/staff/coach/group',
     data,
-    // method: 'post'
     method: 'get'
   })
 }

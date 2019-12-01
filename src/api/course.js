@@ -13,7 +13,7 @@ export const getCourse = (info) => {
 export const addCourse = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/course/add',
+    url: 'v1/staff/course/single',
     data,
     method: 'post'
   })
@@ -22,18 +22,16 @@ export const addCourse = (info) => {
 export const updateCourse = (info) => {
   const data = info
   return axios.request({
-    url: `v1/course/${data.courseId}/update`,
+    url: `v1/staff/course/single/${data.courseId}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-//put和动态接口的用法
 
 export const deleteCourse = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/course/delete',
+    url: 'v1/staff/course/single/${data.id}',
     data,
     method: 'delete'
   })
@@ -44,16 +42,15 @@ export const queryCourseOneInfo = (courseId) => {
     courseId: courseId
   }
   return axios.request({
-    url: 'v1/course/querycourseinfo',
+    url: 'v1/staff/course/single',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
 
 export const getCourseName = () => {
   return axios.request({
-    url: 'v1/course/coursename',
+    url: 'v1/staff/course/single/coursename',
     method: 'get'
   })
 }
@@ -61,8 +58,7 @@ export const getCourseName = () => {
 export const RenewalPrivate = (info) => {
   const data = info
   return axios.request({
-    // url: `v1/buyvipcard/RenewalPrivate`,//这里为什么要用模板字符串？？有什么特殊意义？？
-    url: 'v1/buyvipcard/RenewalPrivate',
+    url: `v1/customer/buycard/RenewalPrivate`,
     data,
     method: 'post'
   })

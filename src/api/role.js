@@ -8,22 +8,20 @@ export const getAllRole = (info) => {
     method: 'post'
   })
 }
-// 未找到文档
 
 export const deleteRole = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/permission/role/delete',
+    url: `v1/staff/permission/role/${data.id}`,
     data,
-    method: 'post'
+    method: 'delete'
   })
 }
-// 未找到文档
 
 export const addRole = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/permission/role/add',
+    url: 'v1/staff/permission/role',
     data,
     method: 'post'
   })
@@ -32,19 +30,17 @@ export const addRole = (info) => {
 export const editRole = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/permission/role/update',
+    url: `v1/staff/permission/role/${data.id}`,
     data,
-    method: 'post'
+    method: 'put'
   })
 }
-// 未找到文档
 
 export const getRoleResource = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/permission/role/queryResource',
+    url: 'v1/staff/permission/role/queryResource',
     data,
-    method: 'post'
+    method: 'get'
   })
 }
-// 未找到文档

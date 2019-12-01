@@ -23,7 +23,7 @@ export const getPlaceData = (info) => { // 获取单个场地信息
 export const addPlace = (info) => { // 添加场地
   const data = info
   return axios.request({
-    url: 'v1/manage/addRoom',
+    url: 'v1/storage/room',
     data,
     method: 'post'
   })
@@ -32,7 +32,7 @@ export const addPlace = (info) => { // 添加场地
 export const updatePlace = (info) => { // 更新场地
   const data = info
   return axios.request({
-    url: 'v1/manage/updateRoom',
+    url: `v1/storage/room/${data.id}`,
     data,
     method: 'put'
   })
@@ -41,12 +41,11 @@ export const updatePlace = (info) => { // 更新场地
 export const deletePlace = (info) => { // 删除场地
   const data = info
   return axios.request({
-    url: 'v1/manage/delRoom',
+    url: `v1/storage/room/${data.id}`,
     data,
     method: 'delete'
   })
-}
-// 有两个一样的接口不知道用哪个
+} 
 
 export const UploadExcel = (info) => { // 导入Excel
   const data = info

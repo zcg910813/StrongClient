@@ -18,7 +18,6 @@ export const updateExperience = (info) => {
     method: 'put'
   })
 }
-//不确定接口
 
 export const deleteExperience = (experienceId) => {
   const data = {}
@@ -28,7 +27,6 @@ export const deleteExperience = (experienceId) => {
     method: 'delete'
   })
 }
-// 不确定接口
 
 export const queryExperience = (info) => {
   const data = info
@@ -64,7 +62,6 @@ export const cancelExperience = (experienceId) => {
   return axios.request({
     url: 'v1/customer/expect/cancel',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }

@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const getRegion = (info) => { // 获取所在地区
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/queryArea',
+    url: `v1/storage/manage/area/${data.id}`,
     data,
     method: 'get'
   })
@@ -12,7 +12,7 @@ export const getRegion = (info) => { // 获取所在地区
 export const addVenue = (info) => { // 新增场馆
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/addStore',
+    url: 'v1/storage/manage',
     data,
     method: 'post'
   })
@@ -39,7 +39,7 @@ export const fetchAllVenue = (info) => { // 获取场馆列表
 export const deleteVenue = (info) => { // 删除场馆
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/deleteStore',
+    url: `v1/storage/manage/${data.id}`,
     data,
     method: 'delete'
   })
@@ -48,7 +48,7 @@ export const deleteVenue = (info) => { // 删除场馆
 export const updateVenue = (info) => { // 编辑场馆
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/updateStore',
+    url: `v1/storage/manage/${data.id}`,
     data,
     method: 'put'
   })
@@ -58,7 +58,7 @@ export const updateVenue = (info) => { // 编辑场馆
 export const getCurrentStoreData = (info) => { // 场馆管理
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/queryAllStores',
+    url: `v1/storage/manage/${data.id}`,
     data,
     method: 'get'
   })
@@ -67,7 +67,7 @@ export const getCurrentStoreData = (info) => { // 场馆管理
 export const AddField = (info) => { // 场馆管理
   const data = info
   return axios.request({
-    url: 'v1/storage/manage/AddStore',
+    url: 'v1/storage/manage',
     data,
     method: 'post'
   })

@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addCoach = (info) => {  // 添加教练
   const data = info
   return axios.request({
-    url: 'v1/coach/add',
+    url: 'v1/staff/coach/single',
     data,
     method: 'post'
   })
@@ -12,26 +12,22 @@ export const addCoach = (info) => {  // 添加教练
 export const updateCoach = (info) => { // 编辑教练
   const data = info
   return axios.request({
-    url: 'v1/coach/update',
+    url: `v1/staff/coach/single/${data.id}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-//不确定put的用法
 
 export const deleteCoach = (coachId) => { // 删除教练
   const data = {
     id: coachId
   }
   return axios.request({
-    url: 'v1/coach/delete',
+    url: 'v1/staff/coach/single',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
-//不确定delete的用法
 
 export const addPosition = (info) => {
   const data = {
@@ -68,9 +64,8 @@ export const deletePosition = (info) => {
 export const queryPosition = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/coach/positionquery',
+    url: 'v1/staff/coach/single/position',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -80,7 +75,6 @@ export const queryOrderCoach = (info) => {
   return axios.request({
     url: 'v1/coach/queryOrderCoach',
     data,
-    //method: 'post'
     method: 'get'
   })
 }
@@ -99,7 +93,6 @@ export const deleteOrderCoach = (info) => {
   return axios.request({
     url: 'v1/coach/deleteOrderCoach',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -110,7 +103,6 @@ export const pauseworktimeupdate = (info) => {
   return axios.request({
     url: 'v1/coach/pauseworktimeupdate',
     data,
-    // method: 'post'
     method: 'put'
   })
 }
@@ -129,9 +121,8 @@ export const queryPrivateLessonInfo = (info) => {
 export const queryCoachPrivatelessonTime = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/coach/queryCoachPrivatelessonTime',
+    url: 'v1/staff/coach/single/privateLessonTime',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -139,9 +130,8 @@ export const queryCoachPrivatelessonTime = (info) => {
 export const worktimeupdate = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/coach/worktimeupdate',
+    url: 'v1/staff/coach/single/worktime',
     data,
-    // method: 'post'
     method: 'put'
   })
 }
@@ -150,7 +140,7 @@ export const worktimeupdate = (info) => {
 export const resumeOffice = (info) => { // 教练离职恢复
   const data = info
   return axios.request({
-    url: 'v1/coach/resumeOffice',
+    url: 'v1/staff/coach/single/resumeOffice',
     data,
     method: 'post'
   })

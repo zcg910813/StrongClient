@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addEmployee = (info) => {   // 添加工作人员
   const data = info
   return axios.request({
-    url: 'v1/employee/add',
+    url: 'v1/staff/employeer/single',
     data,
     method: 'post'
   })
@@ -12,33 +12,28 @@ export const addEmployee = (info) => {   // 添加工作人员
 export const updateEmployee = (info) => {  // 编辑工作人员
   const data = info
   return axios.request({
-    url: 'v1/employee/update',
+    url: `v1/staff/employeer/single/${data.id}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-//put用法 
 
 export const deleteEmployee = (personId) => {  // 删除工作人员
   const data = {
     id: personId
   }
   return axios.request({
-    url: 'v1/employee/delete',
+    url: 'v1/staff/employeer/single',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
-// delete用法
 
 export const queryJob = () => {
   const data = {}
   return axios.request({
-    url: 'v1/employee/positionquery',
+    url: 'v1/staff/employeer/single/positionquery',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -58,12 +53,11 @@ export const addJob = (info) => {
 export const updateJob = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/employee/positionupdate',
+    url: 'v1/staff/employeer/single/adminPositionUpdate',
     data,
-    method: 'post'
+    method: 'get'
   })
 }
-// 未找到文档
 
 export const deleteJob = (info) => {
   const data = info
@@ -78,9 +72,8 @@ export const deleteJob = (info) => {
 export const queryMemberPrivate = (info) => { // 会员拥有的私教课
   const data = info
   return axios.request({
-    url: 'v1/members/queryMemberPrivate',
+    url: 'v1/customer/member/memberPrivate',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -88,7 +81,7 @@ export const queryMemberPrivate = (info) => { // 会员拥有的私教课
 export const resumeOffice = (info) => { // 员工离职恢复
   const data = info
   return axios.request({
-    url: 'v1/employee/resumeOffice',
+    url: 'v1/staff/employeer/single/resumeOffice',
     data,
     method: 'post'
   })

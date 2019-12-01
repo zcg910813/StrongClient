@@ -33,9 +33,8 @@ export const getCourseData = (info) => {
 export const getCoachData = (info) => {  // 获取教练列表
   const data = info
   return axios.request({
-    url: 'v1/coach/query',
+    url: `v1/staff/coach/single/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -43,9 +42,8 @@ export const getCoachData = (info) => {  // 获取教练列表
 export const getAllWorker = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/employee/queryinfo',
+    url: 'v1/staff/employeer/single/queryinfo',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -53,9 +51,8 @@ export const getAllWorker = (info) => {
 export const getWorkerMember = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/employee/query',
+    url: `v1/staff/employeer/single/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -73,9 +70,8 @@ export const getRoomsData = (info) => { // 获取场馆教室
 export const getAllPersonData = (info) => { // 查询工作人员或教练
   const data = info
   return axios.request({
-    url: 'v1/employee/queryEmployeeAndCoach',
+    url: 'v1/staff/employeer/single/queryEmployeeAndCoach',
     data,
-    // method: 'post'
     method: 'get'
   })
 }

@@ -3,29 +3,27 @@ import axios from '@/config/request'
 export const registerMember = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/members/registermember',
+    url: 'v1/member/registermember',
     data,
     method: 'post'
   })
 }
+//文档不懂
 
 export const updateRfid = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/members/updaterfid',
+    url: 'v1/customer/member/rfid',
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-// put用法
 
 export const queryMemberInfo = (memberuid) => {
   const data = {}
   return axios.request({
-    url: `v1/members/querymemberinfo/${memberuid}`,
+    url: `v1/member/querymemberinfo/${memberuid}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -33,7 +31,7 @@ export const queryMemberInfo = (memberuid) => {
 export const insertDeposit = (deposit) => {
   const data = deposit
   return axios.request({
-    url: 'v1/members/insertdeposit',
+    url: 'v1/member/insertdeposit',
     data,
     method: 'post'
   })
@@ -42,7 +40,7 @@ export const insertDeposit = (deposit) => {
 export const insertEarnest = (earnest) => {
   const data = earnest
   return axios.request({
-    url: 'v1/members/insertearnest',
+    url: 'v1/customer/member/earnest',
     data,
     method: 'post'
   })
@@ -53,9 +51,8 @@ export const queryDeposit = (memberuid) => {
     memberid: memberuid
   }
   return axios.request({
-    url: 'v1/members/querydeposit',
+    url: 'v1/customer/member/deposit',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -65,9 +62,8 @@ export const queryEarnest = (memberuid) => {
     memberid: memberuid
   }
   return axios.request({
-    url: 'v1/members/queryearnest',
+    url: 'v1/customer/member/earnest',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -75,9 +71,8 @@ export const queryEarnest = (memberuid) => {
 export const deleteEarnest = (memberuid) => {
   const data = memberuid
   return axios.request({
-    url: 'v1/members/deleteearnest',
+    url: 'v1/customer/member/earnest',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -85,9 +80,8 @@ export const deleteEarnest = (memberuid) => {
 export const deleteDeposit = (memberuid) => {
   const data = memberuid
   return axios.request({
-    url: 'v1/members/deleteDeposit',
+    url: 'v1/customer/member/deposit',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -95,9 +89,8 @@ export const deleteDeposit = (memberuid) => {
 export const notifyMsg = (msgdata) => {
   const data = msgdata
   return axios.request({
-    url: 'v1/members/updatenotifymsg',
+    url: 'v1/customer/member/notify',
     data,
-    // method: 'post'
     method: 'put'
   })
 }
@@ -105,7 +98,7 @@ export const notifyMsg = (msgdata) => {
 export const getAllDeposits = (info) => {   // 获取押金列表
   const data = info
   return axios.request({
-    url: 'v1/members/getAllDeposits',
+    url: 'v1/member/getAllDeposits',
     data,
     method: 'post'
   })
@@ -115,7 +108,7 @@ export const getAllDeposits = (info) => {   // 获取押金列表
 export const getAllEarnests = (info) => { // 获取定金列表
   const data = info
   return axios.request({
-    url: 'v1/members/getAllEarnests',
+    url: 'v1/member/getAllEarnests',
     data,
     method: 'post'
   })
@@ -125,7 +118,7 @@ export const getAllEarnests = (info) => { // 获取定金列表
 export const insertCabinets = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/members/insertCabinets',
+    url: 'v1/customer/member/cabinets',
     data,
     method: 'post'
   })
@@ -134,9 +127,8 @@ export const insertCabinets = (info) => {
 export const queryEffective = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/queryEffective',
+    url: 'v1/customer/buycard/queryEffective',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -144,9 +136,8 @@ export const queryEffective = (info) => {
 export const queryPotential = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/queryPotential',
+    url: 'v1/customer/buycard/queryPotential',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -154,7 +145,7 @@ export const queryPotential = (info) => {
 export const expiredMember = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/expiredMember',
+    url: 'v1/customer/buycard/expiredMember',
     data,
     method: 'post'
   })
@@ -163,7 +154,7 @@ export const expiredMember = (info) => {
 export const experienceMember = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/experienceMember',
+    url: 'v1/customer/buycard/experienceMember',
     data,
     method: 'post'
   })
@@ -172,19 +163,17 @@ export const experienceMember = (info) => {
 export const signInfo = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/signInfo',
+    url: 'v1/customer/memberanalysis/sign',
     data,
-    method: 'post'
+    method: 'get'
   })
 }
-// 未找到接口文件
 
 export const orderRecord = (info) => { // 约课记录
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/orderRecord',
+    url: 'v1/customer/memberanalysis/order',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -192,9 +181,8 @@ export const orderRecord = (info) => { // 约课记录
 export const signPrivateLessonRecord = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/signPrivateLessonRecord',
+    url: 'v1/customer/memberanalysis/sign/private',
     data,
-    // method: 'post'
     method: 'get'  
   })
 }
@@ -202,9 +190,8 @@ export const signPrivateLessonRecord = (info) => {
 export const queryMemberVipCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/queryMemberVipCard',
+    url: 'v1/customer/memberanalysis/memberVipCard',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -212,9 +199,8 @@ export const queryMemberVipCard = (info) => {
 export const trainingRecordList = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/trainingRecordList',
+    url: 'v1/customer/memberanalysis/training',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -222,9 +208,8 @@ export const trainingRecordList = (info) => {
 export const contractList = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/contractList',
+    url: 'v1/customer/memberanalysis/contract',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -232,9 +217,8 @@ export const contractList = (info) => {
 export const followList = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/followList',
+    url: 'v1/customer/memberanalysis/follow',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -242,39 +226,34 @@ export const followList = (info) => {
 export const deleteFollow = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/follow/delete',
+    url: 'v1/customer/pursue',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
-// delete用法
 
 export const deleteMembers = (info) => { // 删除会员
   const data = info
   return axios.request({
-    url: 'v1/members/deleteMember',
+    url: `v1/customer/member/${data.id}`,
     data,
-    method: 'post'
+    method: 'delete'
   })
 }
-// 未找到文档
 
 export const updateMembers = (info) => { // 编辑会员
   const data = info
   return axios.request({
-    url: 'v1/members/updateMember',
+    url: `v1/customer/member/${data.id}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-// put用法
 
 export const depletedMembers = (info) => { // 耗尽会员
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/depletedMember',
+    url: 'v1/customer/buycard/depletedMember',
     data,
     method: 'post'
   })
@@ -283,7 +262,7 @@ export const depletedMembers = (info) => { // 耗尽会员
 export const pincardMembers = (info) => { // 销卡会员
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/pincardMember',
+    url: 'v1/customer/buycard/pincardMember',
     data,
     method: 'post'
   })
@@ -292,7 +271,7 @@ export const pincardMembers = (info) => { // 销卡会员
 export const cabinetMember = (info) => { // 租柜会员
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/cabinetMember',
+    url: 'v1/customer/buycard/cabinetMember',
     data,
     method: 'post'
   })
@@ -301,7 +280,7 @@ export const cabinetMember = (info) => { // 租柜会员
 export const leaveMemberData = (info) => { // 请假会员
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/leaveMember',
+    url: 'v1/customer/buycard/leaveMember',
     data,
     method: 'post'
   })
@@ -310,7 +289,7 @@ export const leaveMemberData = (info) => { // 请假会员
 export const addFollow = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/follow/add',
+    url: 'v1/customer/pursue',
     data,
     method: 'post'
   })
@@ -319,9 +298,8 @@ export const addFollow = (info) => {
 export const ContractOrder = (info) => { // 合同订单
   const data = info
   return axios.request({
-    url: 'v1/members/queryOrderList',
+    url: 'v1/customer/member/orderList',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -329,9 +307,8 @@ export const ContractOrder = (info) => { // 合同订单
 export const getMemberBelongCard = (info) => { // 该会员的所有会员卡列表
   const data = info
   return axios.request({
-    url: 'v1/members/queryMemberVipCard',
+    url: 'v1/customer/member/memberVipCard',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -339,19 +316,17 @@ export const getMemberBelongCard = (info) => { // 该会员的所有会员卡列
 export const TrainingRecord = (info) => { // 训练记录
   const data = info
   return axios.request({
-    url: 'v1/members/querySigninList',
+    url: 'v1/customer/member/signList',
     data,
-    method: 'post'
+    method: 'get'
   })
 }
-// 未找到文档
 
 export const FollowUp = (info) => { // 跟进记录
   const data = info
   return axios.request({
-    url: 'v1/members/queryFollowList',
+    url: 'v1/customer/member/followList',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -359,16 +334,15 @@ export const FollowUp = (info) => { // 跟进记录
 export const queryMemberSignInfo = (info) => { // 会员分析
   const data = info
   return axios.request({
-    url: 'v1/memberanalysis/queryMemberSignInfo',
+    url: 'v1/customer/memberanalysis/sign',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
 export const BuyWater = (info) => { // 购买水费
   const data = info
   return axios.request({
-    url: 'v1/members/addWaterRate',
+    url: 'v1/customer/member/addWaterRate',
     data,
     method: 'post'
   })

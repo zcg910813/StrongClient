@@ -34,9 +34,8 @@ export const queryVipCardDetails = (uid) => {
     uid: uid
   }
   return axios.request({
-    url: 'v1/vipcard/queryvipcarddetails',
+    url: 'v1/customer/membercard',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -46,9 +45,8 @@ export const deleteVipCard = (uidArray) => {
     uids: uidArray
   }
   return axios.request({
-    url: 'v1/vipcard/deletevipcard',
+    url: 'v1/customer/membercard',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -57,7 +55,7 @@ export const deleteVipCard = (uidArray) => {
 export const updateVonsale = (info) => { // 修改会员卡在售状态
   const data = info
   return axios.request({
-    url: 'v1/vipcard/updateVOnsale',
+    url: 'v1/customer/membercard/sale/von',
     data,
     method: 'put'
   })
@@ -67,7 +65,7 @@ export const updateVonsale = (info) => { // 修改会员卡在售状态
 export const RecoveryCard = (info) => { // 会员卡停用后恢复
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/RecoveryCard',
+    url: 'v1/customer/buycard/RecoveryCard',
     data,
     method: 'post'
   })

@@ -3,9 +3,8 @@ import axios from '@/config/request'
 export const getAchievementPerson = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/order/queryEmployeeAchi',
+    url: 'v1/staff/order/single/queryEmployeeAchi',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -13,9 +12,8 @@ export const getAchievementPerson = (info) => {
 export const getAchievementCoach = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/order/queryCoachAchi',
+    url: 'v1/staff/order/single/queryCoachAchi',
     data,
-    // method: 'post'
     method: 'get'
   })
 }

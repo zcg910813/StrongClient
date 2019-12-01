@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addLeague = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/sign',
+    url: 'v1/staff/course/group/sign',
     data,
     method: 'post'
   })
@@ -12,7 +12,7 @@ export const addLeague = (info) => {
 export const addGroupLesson = (info) => {  // 团课排课添加
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/add',
+    url: 'v1/staff/course/group',
     data,
     method: 'post'
   })
@@ -21,22 +21,19 @@ export const addGroupLesson = (info) => {  // 团课排课添加
 export const updateLeague = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/update',
+    url: `v1/staff/course/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-// put用法
 
 export const deleteLeague = (courseId) => {
   const data = {
     id: courseId
   }
   return axios.request({
-    url: 'v1/grouplesson/delete',
+    url: 'v1/staff/course/group',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -45,7 +42,7 @@ export const deleteLeague = (courseId) => {
 export const copyLeague = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/copy',
+    url: 'v1/staff/course/group/copy',
     data,
     method: 'post'
   })
@@ -56,7 +53,7 @@ export const clearLeague = (date) => {
     date: date
   }
   return axios.request({
-    url: 'v1/grouplesson/clear',
+    url: 'v1/staff/course/group/clear',
     data,
     method: 'post'
   })
@@ -65,9 +62,8 @@ export const clearLeague = (date) => {
 export const queryLeague = (info) => { // 获取单独排课
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/query',
+    url: `v1/staff/course/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -75,7 +71,7 @@ export const queryLeague = (info) => { // 获取单独排课
 export const signLeague = (info) => { // 签退
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/signOk',
+    url: 'v1/staff/course/group/signOk',
     data,
     method: 'post'
   })
@@ -84,7 +80,7 @@ export const signLeague = (info) => { // 签退
 export const cancelLeague = (info) => { // 取消签退
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/cancelSign',
+    url: 'v1/staff/course/group/cancelSign',
     data,
     method: 'post'
   })
@@ -93,7 +89,7 @@ export const cancelLeague = (info) => { // 取消签退
 export const getCopyCourse = (info) => { // 复制单个课程
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/copyOne',
+    url: 'v1/staff/course/group/copyOne',
     data,
     method: 'post'
   })
@@ -102,7 +98,7 @@ export const getCopyCourse = (info) => { // 复制单个课程
 export const grouplessonOrder = (info) => { // 团课预约添加
   const data = info
   return axios.request({
-    url: 'v1/ordergroup/add',
+    url: 'v1/staff/order/group',
     data,
     method: 'post'
   })
@@ -111,9 +107,8 @@ export const grouplessonOrder = (info) => { // 团课预约添加
 export const grouplessonquery = (info) => {  // 团课预约查询(教练签到)
   const data = info
   return axios.request({
-    url: 'v1/ordergroup/query',
+    url: `v1/staff/order/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -121,7 +116,7 @@ export const grouplessonquery = (info) => {  // 团课预约查询(教练签到)
 export const orderTimeSet = (info) => {  // 团课预约限制设置
   const data = info
   return axios.request({
-    url: 'v1/grouplesson/orderTimeSet',
+    url: 'v1/staff/course/group/orderTimeSet',
     data,
     method: 'post'
   })
@@ -130,7 +125,7 @@ export const orderTimeSet = (info) => {  // 团课预约限制设置
 export const orderTimeSetQuery = (uid) => { // // 团课预约限制获取
   const data = uid
   return axios.request({
-    url: 'v1/grouplesson/orderTimeSetQuery',
+    url: 'v1/staff/course/group/orderTimeSetQuery',
     data,
     method: 'post'
   })
@@ -139,7 +134,7 @@ export const orderTimeSetQuery = (uid) => { // // 团课预约限制获取
 export const priOrderTimeSet = (uid) => { // // 私教课预约限制set
   const data = uid
   return axios.request({
-    url: 'v1/coach/orderTimeSet',
+    url: 'v1/staff/coach/single/order/timeSet',
     data,
     method: 'post'
   })
@@ -148,9 +143,8 @@ export const priOrderTimeSet = (uid) => { // // 私教课预约限制set
 export const priOrderTimeSetQuery = (uid) => { // // 私教课预约限制get
   const data = uid
   return axios.request({
-    url: 'v1/coach/orderTimeSetQuery',
+    url: 'v1/staff/coach/single/order/timeSet',
     data,
-    // method: 'post'
     method: 'get'
   })
 }

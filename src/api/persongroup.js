@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addEmployeeGroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/employeegroup/add',
+    url: 'v1/staff/employeer/group',
     data,
     method: 'post'
   })
@@ -12,22 +12,19 @@ export const addEmployeeGroup = (info) => {
 export const updateEmployeeGroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/employeegroup/update',
+    url: `v1/staff/employeer/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-// put用法
 
 export const deleteEmployeeGroup = (employeeId) => {
   const data = {
     id: employeeId
   }
   return axios.request({
-    url: 'v1/employeegroup/delete',
+    url: 'v1/staff/employeer/group',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -36,9 +33,8 @@ export const deleteEmployeeGroup = (employeeId) => {
 export const queryEmployeeGroup = () => {
   const data = {}
   return axios.request({
-    url: 'v1/employeegroup/query',
+    url: 'v1/staff/employeer/group/${data.id}',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -46,9 +42,8 @@ export const queryEmployeeGroup = () => {
 export const getAllPrivates = (info) => {  // 获取私教课列表
   const data = info
   return axios.request({
-    url: 'v1/vipcard/getAllPrivates',
+    url: `v1/customer/membercard/private/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -56,9 +51,8 @@ export const getAllPrivates = (info) => {  // 获取私教课列表
 export const queryPrivateDetails = (uid) => {
   const data = uid
   return axios.request({
-    url: 'v1/vipcard/queryPrivateDetails',
+    url: 'v1/customer/membercard/private',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -66,9 +60,8 @@ export const queryPrivateDetails = (uid) => {
 export const deletePrivate = (uid) => {
   const data = uid
   return axios.request({
-    url: 'v1/vipcard/deletePrivate',
+    url: 'v1/customer/membercard/private',
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
@@ -77,7 +70,7 @@ export const deletePrivate = (uid) => {
 export const addPrivate = (uid) => {
   const data = uid
   return axios.request({
-    url: 'v1/vipcard/addPrivate',
+    url: 'v1/customer/membercard/private',
     data,
     method: 'post'
   })
@@ -86,9 +79,8 @@ export const addPrivate = (uid) => {
 export const editPrivate = (uid) => {
   const data = uid
   return axios.request({
-    url: 'v1/vipcard/updatePrivate',
+    url: 'v1/customer/membercard/private',
     data,
-    // method: 'post'
     method: 'put'
   })
 }

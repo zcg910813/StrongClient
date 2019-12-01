@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const memberBuyVipCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/memberBuyVipCard',
+    url: 'v1/customer/buycard/MemberBuyVipCard',
     data,
     method: 'post'
   })
@@ -11,37 +11,35 @@ export const memberBuyVipCard = (info) => {
 
 export const quertEffective = () => {
   return axios.request({
-    url: 'v1/buyvipcard/queryEffective',
-    // method: 'post'
+    url: 'v1/customer/buycard/queryEffective',
     method: 'get'
   })
 }
 
 export const queryPotential = () => {
   return axios.request({
-    url: 'v1/buyvipcard/queryPotential',
-    // method: 'post'
+    url: 'v1/customer/buycard/queryPotential',
     method: 'get'
   })
 }
 
 export const expiredMember = () => {
   return axios.request({
-    url: 'v1/buyvipcard/expiredMember',
+    url: 'v1/customer/buycard/expiredMember',
     method: 'post'
   })
 }
 
 export const experienceMember = () => {
   return axios.request({
-    url: 'v1/buyvipcard/experienceMember',
+    url: 'v1/customer/buycard/experienceMember',
     method: 'post'
   })
 }
 
 export const cabinetMember = () => {
   return axios.request({
-    url: 'v1/buyvipcard/cabinetMember',
+    url: 'v1/customer/buycard/cabinetMember',
     method: 'post'
   })
 }
@@ -52,7 +50,7 @@ export const nearFutureCard = (cardtype, cardsubtype) => {
     subtype: cardsubtype
   }
   return axios.request({
-    url: 'v1/buyvipcard/nearFutureCard',
+    url: 'v1/customer/buycard/nearFutureCard',
     data,
     method: 'post'
   })
@@ -61,7 +59,7 @@ export const nearFutureCard = (cardtype, cardsubtype) => {
 export const frequencyCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/frequencyCard',
+    url: 'v1/customer/buycard/frequencyCard',
     data,
     method: 'post'
   })
@@ -70,7 +68,7 @@ export const frequencyCard = (info) => {
 export const balanceDeplete = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/balanceDeplete',
+    url: 'v1/customer/buycard/balanceDeplete',
     data,
     method: 'post'
   })
@@ -79,7 +77,7 @@ export const balanceDeplete = (info) => {
 export const birthdayReminding = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/birthdayReminding',
+    url: 'v1/customer/buycard/birthdayReminding',
     data,
     method: 'post'
   })
@@ -93,7 +91,6 @@ export const Revoke = (info) => {
     method: 'post'
   })
 }
-//未找到对应文档
 
 export const ShengCard = (info) => {
   const data = info
@@ -103,12 +100,11 @@ export const ShengCard = (info) => {
     method: 'post'
   })
 }
-//未找到对应文档
 
 export const RenewalCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/RenewalCard',
+    url: 'v1/customer/buycard/RenewalCard',
     data,
     method: 'post'
   })
@@ -117,7 +113,7 @@ export const RenewalCard = (info) => {
 export const EditVipCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/EditVipCard',
+    url: 'v1/customer/buycard/EditVipCard',
     data,
     method: 'post'
   })
@@ -126,7 +122,7 @@ export const EditVipCard = (info) => {
 export const TransferCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/TransferCard',
+    url: 'v1/customer/buycard/TransferCard',
     data,
     method: 'post'
   })
@@ -135,7 +131,7 @@ export const TransferCard = (info) => {
 export const LeaveCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/LeaveCard',
+    url: 'v1/customer/buycard/LeaveCard',
     data,
     method: 'post'
   })
@@ -144,12 +140,11 @@ export const LeaveCard = (info) => {
 export const PinCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/PinCard',
+    url: 'v1/customer/buycard/pincardMember',
     data,
     method: 'post'
   })
 }
-//未找到对应文档
 
 export const PatchCard = (info) => {
   const data = info
@@ -164,7 +159,7 @@ export const PatchCard = (info) => {
 export const giveCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/GiveExperienceCard',
+    url: 'v1/customer/buycard/GiveExperienceCard',
     data,
     method: 'post'
   })
@@ -173,7 +168,7 @@ export const giveCard = (info) => {
 export const buyPriCourse = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/MemberBuyPrivate',
+    url: 'v1/customer/buycard/MemberBuyPrivate',
     data,
     method: 'post'
   })
@@ -182,9 +177,8 @@ export const buyPriCourse = (info) => {
 export const QueryAllBVCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/QueryAllBVCard',
+    url: 'v1/customer/buycard/QueryAllBVCard',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -192,9 +186,8 @@ export const QueryAllBVCard = (info) => {
 export const QueryAllBPCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/QueryAllBPCard',
+    url: 'v1/customer/buycard/QueryAllBPCard',
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -202,7 +195,7 @@ export const QueryAllBPCard = (info) => {
 export const addRenewalCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/RenewalCard',
+    url: 'v1/customer/buycard/RenewalCard',
     data,
     method: 'post'
   })
@@ -211,7 +204,7 @@ export const addRenewalCard = (info) => {
 export const Charge = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/ChargeCard',
+    url: 'v1/customer/buycard/ChargeCard',
     data,
     method: 'post'
   })
@@ -220,18 +213,16 @@ export const Charge = (info) => {
 export const stopCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/StopCard',
+    url: 'v1/customer/buycard/StopCard',
     data,
-    // method: 'post'
     method: 'put'
   })
 }
-//不确定put请求的用法
 
 export const transferCard = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/TransferCard',
+    url: 'v1/customer/buycard/TransferCard',
     data,
     method: 'post'
   })
@@ -240,7 +231,7 @@ export const transferCard = (info) => {
 export const BatchLeave = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/buyvipcard/LeaveCard',
+    url: 'v1/customer/buycard/LeaveCard',
     data,
     method: 'post'
   })

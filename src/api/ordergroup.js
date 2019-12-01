@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const addordergroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/ordergroup/add',
+    url: 'v1/staff/order/group',
     data,
     method: 'post'
   })
@@ -12,13 +12,11 @@ export const addordergroup = (info) => {
 export const deleteordergroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/ordergroup/delete',
+    url: `v1/staff/order/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'delete'
   })
 }
-// delete用法
 
 export const queryordergroup = (curpage) => {
   let curPage = 1
@@ -26,9 +24,8 @@ export const queryordergroup = (curpage) => {
     curPage: curPage
   }
   return axios.request({
-    url: 'v1/ordergroup/query',
+    url: `v1/staff/order/group/${data.id}`,
     data,
-    // method: 'post'
     method: 'get'
   })
 }
@@ -36,7 +33,7 @@ export const queryordergroup = (curpage) => {
 export const OrderGroup = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/ordergroup/sign',
+    url: 'v1/staff/order/group/sign',
     data,
     method: 'post'
   })
