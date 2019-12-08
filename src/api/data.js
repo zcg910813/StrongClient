@@ -33,7 +33,7 @@ export const getCourseData = (info) => {
 export const getCoachData = (info) => {  // 获取教练列表
   const data = info
   return axios.request({
-    url: `v1/staff/coach/single/${data.id}`,
+    url: `v1/staff/coach/single`,
     data,
     method: 'get'
   })
@@ -51,7 +51,7 @@ export const getAllWorker = (info) => {
 export const getWorkerMember = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/employeer/single/${data.id}`,
+    url: `v1/staff/employeer/single`,
     data,
     method: 'get'
   })

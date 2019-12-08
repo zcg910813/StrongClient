@@ -12,7 +12,7 @@ export const addordergroup = (info) => {
 export const deleteordergroup = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/order/group/${data.id}`,
+    url: `v1/staff/order/group`,
     data,
     method: 'delete'
   })
@@ -24,7 +24,7 @@ export const queryordergroup = (curpage) => {
     curPage: curPage
   }
   return axios.request({
-    url: `v1/staff/order/group/${data.id}`,
+    url: `v1/staff/order/group`,
     data,
     method: 'get'
   })

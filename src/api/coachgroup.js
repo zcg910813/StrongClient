@@ -12,7 +12,7 @@ export const addCoachGroup = (info) => {
 export const updateCoachGroup = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/coach/group/${data.id}`  ,
+    url: `v1/staff/coach/group`  ,
     data,
     method: 'put'
   })

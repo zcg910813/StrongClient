@@ -21,7 +21,7 @@ export const addGroupLesson = (info) => {  // 团课排课添加
 export const updateLeague = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/course/group/${data.id}`,
+    url: `v1/staff/course/group`,
     data,
     method: 'put'
   })
@@ -62,7 +62,7 @@ export const clearLeague = (date) => {
 export const queryLeague = (info) => { // 获取单独排课
   const data = info
   return axios.request({
-    url: `v1/staff/course/group/${data.id}`,
+    url: `v1/staff/course/group`,
     data,
     method: 'get'
   })
@@ -107,7 +107,7 @@ export const grouplessonOrder = (info) => { // 团课预约添加
 export const grouplessonquery = (info) => {  // 团课预约查询(教练签到)
   const data = info
   return axios.request({
-    url: `v1/staff/order/group/${data.id}`,
+    url: `v1/staff/order/group`,
     data,
     method: 'get'
   })

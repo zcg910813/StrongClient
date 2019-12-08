@@ -12,7 +12,7 @@ export const getAllRole = (info) => {
 export const deleteRole = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/permission/role/${data.id}`,
+    url: `v1/staff/permission/role`,
     data,
     method: 'delete'
   })
@@ -30,7 +30,7 @@ export const addRole = (info) => {
 export const editRole = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/permission/role/${data.id}`,
+    url: `v1/staff/permission/role`,
     data,
     method: 'put'
   })

@@ -13,7 +13,7 @@ export const addExperience = (info) => {
 export const updateExperience = (info) => {
   const data = info
   return axios.request({
-    url: `v1/customer/expect/${data.id}`,
+    url: `v1/customer/expect`,
     data,
     method: 'put'
   })

@@ -22,7 +22,7 @@ export const addCourse = (info) => {
 export const updateCourse = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/course/single/${data.courseId}`,
+    url: `v1/staff/course/single`,
     data,
     method: 'put'
   })
@@ -31,7 +31,7 @@ export const updateCourse = (info) => {
 export const deleteCourse = (info) => {
   const data = info
   return axios.request({
-    url: 'v1/staff/course/single/${data.id}',
+    url: 'v1/staff/course/single',
     data,
     method: 'delete'
   })

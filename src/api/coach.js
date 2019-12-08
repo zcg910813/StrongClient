@@ -12,7 +12,7 @@ export const addCoach = (info) => {  // 添加教练
 export const updateCoach = (info) => { // 编辑教练
   const data = info
   return axios.request({
-    url: `v1/staff/coach/single/${data.id}`,
+    url: `v1/staff/coach/single`,
     data,
     method: 'put'
   })

@@ -12,7 +12,7 @@ export const addEmployeeGroup = (info) => {
 export const updateEmployeeGroup = (info) => {
   const data = info
   return axios.request({
-    url: `v1/staff/employeer/group/${data.id}`,
+    url: `v1/staff/employeer/group`,
     data,
     method: 'put'
   })
@@ -33,7 +33,7 @@ export const deleteEmployeeGroup = (employeeId) => {
 export const queryEmployeeGroup = () => {
   const data = {}
   return axios.request({
-    url: 'v1/staff/employeer/group/${data.id}',
+    url: 'v1/staff/employeer/group',
     data,
     method: 'get'
   })
@@ -42,7 +42,7 @@ export const queryEmployeeGroup = () => {
 export const getAllPrivates = (info) => {  // 获取私教课列表
   const data = info
   return axios.request({
-    url: `v1/customer/membercard/private/${data.id}`,
+    url: `v1/customer/membercard/private`,
     data,
     method: 'get'
   })

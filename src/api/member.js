@@ -235,7 +235,7 @@ export const deleteFollow = (info) => {
 export const deleteMembers = (info) => { // 删除会员
   const data = info
   return axios.request({
-    url: `v1/customer/member/${data.id}`,
+    url: `v1/customer/member`,
     data,
     method: 'delete'
   })
@@ -244,7 +244,7 @@ export const deleteMembers = (info) => { // 删除会员
 export const updateMembers = (info) => { // 编辑会员
   const data = info
   return axios.request({
-    url: `v1/customer/member/${data.id}`,
+    url: `v1/customer/member`,
     data,
     method: 'put'
   })

@@ -12,7 +12,7 @@ export const addEmployee = (info) => {   // 添加工作人员
 export const updateEmployee = (info) => {  // 编辑工作人员
   const data = info
   return axios.request({
-    url: `v1/staff/employeer/single/${data.id}`,
+    url: `v1/staff/employeer/single`,
     data,
     method: 'put'
   })

@@ -32,7 +32,7 @@ export const addPlace = (info) => { // 添加场地
 export const updatePlace = (info) => { // 更新场地
   const data = info
   return axios.request({
-    url: `v1/storage/room/${data.id}`,
+    url: `v1/storage/room`,
     data,
     method: 'put'
   })
@@ -41,7 +41,7 @@ export const updatePlace = (info) => { // 更新场地
 export const deletePlace = (info) => { // 删除场地
   const data = info
   return axios.request({
-    url: `v1/storage/room/${data.id}`,
+    url: `v1/storage/room`,
     data,
     method: 'delete'
   })

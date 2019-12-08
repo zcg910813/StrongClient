@@ -3,7 +3,7 @@ import axios from '@/config/request'
 export const getSigninTable = (info) => { // 获取签到列表
   const data = info
   return axios.request({
-    url: `v1/customer/sign/${data.id}`,
+    url: `v1/customer/sign`,
     data,
     method: 'get'
   })
@@ -30,7 +30,7 @@ export const addSigninTable = (info) => { // 添加用户签到
 export const cancelSigninTable = (info) => { // 取消用户
   const data = info
   return axios.request({
-    url: `v1/customer/sign/${data.id}`,
+    url: `v1/customer/sign`,
     data,
     method: 'delete'
   })
@@ -67,7 +67,7 @@ export const confirmPrivateTable = (info) => {  // 私教签到
 export const getPrivateTable = (info) => { // 获取私教消课列表
   const data = info
   return axios.request({
-    url: `v1/staff/coach/single/sign/privateLesson/${data.id}`,
+    url: `v1/staff/coach/single/sign/privateLesson`,
     data,
     method: 'get'
   })
@@ -85,7 +85,7 @@ export const checkBackPrivateTable = (info) => { // 签退
 export const cancelPrivateTable = (info) => { // 取消签到
   const data = info
   return axios.request({
-    url: `v1/staff/coach/single/sign/privateLesson/${data.id}`,
+    url: `v1/staff/coach/single/sign/privateLesson`,
     data,
     method: 'delete'
   })
